@@ -8,18 +8,8 @@ https://www.resol.de/de/produktdetail/13
 $ dmesg | grep tty
 [6036930.795670] cdc_acm 1-6:1.0: ttyACM0: USB ACM device
 ```
-# Adjust environment variables (s. docker-compose.yml)
+# Adjust environment variables (s. sample docker-compose.yml)
 ```yaml
-  influxdb:
-    image: influxdb
-    restart: always
-    volumes:
-      - /srv/docker/data/influxdb:/var/lib/influxdb
-    logging:
-      driver: syslog
-      options:
-        tag: "docker.{{.ImageName}}.{{.ID}}"
-
   resol2influxdb:
     build: resol2influxdb
     restart: always
