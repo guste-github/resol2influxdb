@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - /srv/docker/data/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=geheim
+      - GF_SECURITY_COOKIE_SAMESITE=disabled
+    depends_on:
+      - influxdb
+    logging:
+      driver: syslog
+      options:
+        tag: "docker.{{.ImageName}}.{{.ID}}"
+
+  influxdb:
+    image: influxdb
+    restart: always
+    volumes:
+      - /srv/docker/data/influxdb:/var/lib/influxdb
+    logging:
+      driver: syslog
+      options:
+        tag: "docker.{{.ImageName}}.{{.ID}}"
+
+  resol2influxdb:
+    build: resol2influxdb
+    restart: always
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
+    environment:
+      - LOGGING_INTERVAL=30000
+      - USB_DEVICE=/dev/ttyACM0
+      - INFLUXDB_HOST=influxdb
+      - INFLUXDB_PORT=8086
+      - INFLUXDB_NAME=resol 
+    depends_on:
+      - influxdb
+    logging:
+      driver: syslog
+      options:
+        tag: "docker.{{.ImageName}}.{{.ID}}"
+        
+    
+
+        
+
+
+
+
+
+
