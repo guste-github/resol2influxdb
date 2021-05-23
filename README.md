@@ -30,7 +30,7 @@ $ dmesg | grep tty
  ```
  
 __resol2influxdb__:
-- `LOGGING_INTERVA` The interval in milliseconds between two db writes.
+- `LOGGING_INTERVAL` The interval in milliseconds between two db writes.
 - `USB_DEVICE` Path name of connected VBus®/USB-Adapter.
 - `INFLUXDB_HOST` The host of the InfluxDB to connect to.
 - `INFLUXDB_PORT` The port of the InfluxDB to connect to.
