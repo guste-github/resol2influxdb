@@ -29,7 +29,7 @@ services:
         tag: "docker.{{.ImageName}}.{{.ID}}"
 
   resol2influxdb:
-    build: resol2influxdb
+    image: guste/resol2influxdb
     restart: always
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
