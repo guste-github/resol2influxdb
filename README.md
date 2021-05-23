@@ -11,7 +11,7 @@ $ dmesg | grep tty
 # Adjust environment variables (s. sample docker-compose.yml)
 ```yaml
   resol2influxdb:
-    build: resol2influxdb
+    image: guste/resol2influxdb
     restart: always
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
