@@ -34,7 +34,7 @@ __resol2influxdb__:
 - `USB_DEVICE` Path name of connected VBus®/USB-Adapter.
 - `INFLUXDB_HOST` The host of the InfluxDB to connect to.
 - `INFLUXDB_PORT` The port of the InfluxDB to connect to.
-- `INFLUXDB_NAME` The database name (Will be created if it doesn't exsist.)
+- `INFLUXDB_NAME` The database name (Will be created if it doesn't exist.)
 
 # Legal Notices
 RESOL and VBus are trademarks or registered trademarks of RESOL - Elektronische Regelungen GmbH.
