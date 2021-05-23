@@ -1,4 +1,4 @@
-# docker-resol2influxdb
+# resol2influxdb
 RESOL VBus®/USB interface docker linux bridge to influxDB.
 
 https://www.resol.de/de/produktdetail/13
