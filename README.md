@@ -1,5 +1,5 @@
 # docker-resol2influxdb
-This docker image connects the RESOL VBus®/USB interface with the open source time series database influxDB.
+RESOL VBus®/USB interface docker linux bridge to influxDB.
 
 https://www.resol.de/de/produktdetail/13
 
